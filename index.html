@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hamzone</title>
+</head>
+
+<body>
+  <script type="text/javascript" src="https://visjs.github.io/vis-network/standalone/umd/vis-network.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <form>
+    Input the number of boxes to be collected : <br>
+    <input type="number" id="table-row-num" value="1" required="required">
+    <button id="submitButton">Submit</button>
+  </form>
+  <div id="table-gen" style="visibility: hidden">
+    <p>Please use the below table to input each of the route costs.</p>
+    <p>Row headers are starting points and the column headers are end points</p>
+    <p>A is the charging station, and all alphabets following that are the boxes</p>
+    <table id="resultTable" cellpadding="1" cellspacing="1" border="1"></table>
+    <button id="calcButton">Calculate Shortest Round trip</button>
+  </div>
+  <div id="finalRoute" style="width: 50%; float:left"></div>
+  <div id="mynetwork" style="width: 50%; float:right; height:500px;"></div>
+  <script src="src/main.js"></script>
+  <script src="src/model.js"></script>
+  <script src="src/utils.js"></script>
+</body>
+
+</html>
